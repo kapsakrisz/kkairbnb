@@ -4,10 +4,11 @@ import Header from "../components/Header";
 import Banner from '@/components/Banner';
 import Head from 'next/head';
 import IconCard from '@/components/IconCard';
+import BigCard from '@/components/BigCard';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({exploreData}) {
+export default function Home({exploreData,bigCardsData}) {
   return (
     <Head className="">
       <title>KKairbnb</title>
@@ -35,7 +36,21 @@ export default function Home({exploreData}) {
             
             </div>
         </section>
+      
+      <section>
+        <h2 className='text-4xl py-8'>Live anywhere</h2>
+              <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3-ml-3'>
+
+        {bigCardsData?.map(({img,title})=>(
+          <BigCard key={img} img={img} title={title} />
+          ))}
+          </div>
+      </section>
+      
+
       </main>
+
+
     </Head>
   )
 }
@@ -44,9 +59,15 @@ export async function getStaticProps() {
   const exploreData=await fetch('https://www.jsonkeeper.com/b/4G1G').then(
     (res)=>res.json()
   );
+
+
+  const bigCardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+    (res)=>res.json()
+  )
   return {
 props: {
-  exploreData
+  exploreData,
+  bigCardsData
 }
   }
 }
