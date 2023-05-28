@@ -17,7 +17,7 @@ objectFit="cover"
         Where to?
     </p>
 
-    <button></button>
+    <button className="text-pink-500 my-3 bg-white px-10 py-4 shadow-md rounded-full">yo yo</button>
 </div>
         
         </div>

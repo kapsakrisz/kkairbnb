@@ -8,8 +8,8 @@ function Header () {
     <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5 md:px-10'>
         
         <div className='relative flex items-center h-10 cursor-pointer my-auto'>
-            <Image
-                src="/kklogo2.jpg"
+            <Image className='rounded-full'
+                src="/kkbnbv2.jpg"
                 layout='fill'
                 objectFit='contain'
                 objectPosition='left'
