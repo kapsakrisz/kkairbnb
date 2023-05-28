@@ -3,10 +3,11 @@ import { Inter } from 'next/font/google';
 import Header from "../components/Header";
 import Banner from '@/components/Banner';
 import Head from 'next/head';
+import IconCard from '@/components/IconCard';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({exploreData}) {
   return (
     <Head className="">
       <title>KKairbnb</title>
@@ -16,6 +17,36 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <Header/>
       <Banner/>
+      <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+        <section>
+          <h2 className='text-4xl pb-5'>Explore around
+          </h2>
+          
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+
+          {exploreData?.map(({img,distance,location})=> (
+            <IconCard
+            key={img}
+            img={img}
+            distance={distance}
+            location={location}
+            />
+            ))}
+            
+            </div>
+        </section>
+      </main>
     </Head>
   )
+}
+
+export async function getStaticProps() {
+  const exploreData=await fetch('https://www.jsonkeeper.com/b/4G1G').then(
+    (res)=>res.json()
+  );
+  return {
+props: {
+  exploreData
+}
+  }
 }

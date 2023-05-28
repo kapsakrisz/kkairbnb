@@ -14,10 +14,10 @@ objectFit="cover"
 
 <div className="absolute top-7 w-full text-center">
     <p className="text-sm sm:text-lg">
-        Where to?
+        hova mennel?
     </p>
 
-    <button className="text-pink-500 my-3 bg-white px-10 py-4 shadow-md rounded-full">yo yo</button>
+    <button className="text-green-500 my-3 hover:shadow-xl bg-white px-10 py-4 shadow-md rounded-full active:scale-90 transition duration-150">anyadba ha hova  ma hova</button>
 </div>
         
         </div>
