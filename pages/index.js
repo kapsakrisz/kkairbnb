@@ -5,6 +5,7 @@ import Banner from '@/components/Banner';
 import Head from 'next/head';
 import IconCard from '@/components/IconCard';
 import BigCard from '@/components/BigCard';
+import BiggerCard from '@/components/BiggerCard';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,7 +48,13 @@ export default function Home({exploreData,bigCardsData}) {
           </div>
       </section>
       
-
+          <BiggerCard
+          
+          img="https://links.papareact.com/4cj"
+          title="the gretaest outdoors"
+          description="wishloists"
+          buttonText="get inspired"
+          />
       </main>
 
 
