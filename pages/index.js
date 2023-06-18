@@ -6,6 +6,7 @@ import Head from 'next/head';
 import IconCard from '@/components/IconCard';
 import BigCard from '@/components/BigCard';
 import BiggerCard from '@/components/BiggerCard';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,6 +57,8 @@ export default function Home({exploreData,bigCardsData}) {
           buttonText="get inspired"
           />
       </main>
+
+      <Footer/>
 
 
     </Head>
