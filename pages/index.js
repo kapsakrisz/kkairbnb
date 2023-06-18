@@ -52,7 +52,7 @@ export default function Home({exploreData,bigCardsData}) {
           
           img="https://links.papareact.com/4cj"
           title="the gretaest outdoors"
-          description="wishloists"
+          description="wishlists"
           buttonText="get inspired"
           />
       </main>
